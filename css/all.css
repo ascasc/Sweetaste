@@ -263,6 +263,17 @@ body {
     width: 300px;
     margin: 0 10px;
     border: 2px solid #EAF0ED;
+    position: relative;
+}
+#product-list .product span{
+    position: absolute;
+    top: -2px;
+    left: 20px;
+    writing-mode: vertical-lr;
+    padding: 10px;
+    letter-spacing: 5px;
+    color: white;
+    background-color: #3F5D45;
 }
 #product-list .product .row{
     border-bottom: 2px solid #EAF0ED;
