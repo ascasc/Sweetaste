@@ -58,7 +58,10 @@ img{
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
-.clearFix{
+.clearfix:after {
+    content: " ";
+    display: block;;
+    visibility: hidden;
     clear: both;
 }
 
@@ -86,6 +89,8 @@ body {
 }
 #banner img{
     display: block;
+    width: 100%;
+    height: 100%;
 }
 
 #center-main{
@@ -131,18 +136,26 @@ body {
 #center-main a{
     text-decoration: none;
 }
-#show-svg .title-svg{
-    display: flex;
-    justify-content: center;
-    padding: 30px 0;
-}
-#show-svg .title-svg img{
+#show-svg .title-svg:nth-child(1){
+    display: block;
     width: 196px;
     height: 60px;
+    background: url('../img/sm-橫式-為什麼選擇了做甜點.svg')no-repeat;
+    margin: 30px auto;
 }
-#show-svg .img-svg{
-    width: 100%;
-    height: auto;
+#show-svg .title-svg:nth-child(2){
+    display: block;
+    width: 196px;
+    height: 60px;
+    background: url('../img/sm-橫式-為什麼一定要吃甜點.svg')no-repeat;
+    margin: 30px auto;
+}
+#show-svg .title-svg:nth-child(3){
+    display: block;
+    width: 196px;
+    height: 60px;
+    background: url('../img/sm-橫式-想吃甜點是不需要理由的.svg')no-repeat;
+    margin: 30px auto;
 }
 #show-svg .img-svg1{
     background: url('../img/reason2.jpg')no-repeat;
@@ -170,47 +183,7 @@ body {
     letter-spacing: 2px;
     line-height: 2;
 }
-#show-svg .product-list .product.open{
-    display: block;
-}
-#show-svg .product-list .product{
-    display: none;
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    border: 3px solid #EAF0ED;
-    margin-bottom: 30px;
-}
-#show-svg .product-list .product .row{
-    display: flex;
-    justify-content: center;
-    border-bottom: 3px solid #EAF0ED;
-}
-#show-svg .product-list .product .choice-name,
-#show-svg .product-list .product .choice-price{
-    font-size: 1.4rem;
-    color: #3F5D45;
-    padding: 10px 38px;
-    font: Light 20px/20px PingFang TC;
-    font-weight: 300;
-}
-#show-svg .product-list .product .choice-price{
-    font-weight: 350;
-}
-#show-svg .product-list .product .choice-price{
-    border-left: 3px solid #EAF0ED;
-}
-#show-svg .product-list .product .add-car{
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    padding: 16px 0;
-    background-color: #EAF0ED;
-    color: #3F5D45;
-    font: Semibold 24px/20px PingFang TC;
-    font-size: 1.4rem;
-    font-weight: bold;
-}
+/* #product-list */
 #subscribe-email{
     background-color: #3F5D45;
     padding-bottom: 30px;
@@ -224,7 +197,7 @@ body {
     display: block;
     width: 40px;
     height: 40px;
-    background: url('../img/logo-light.svg') no-repeat;
+    background: url('../img/logo-light.svg')no-repeat;
     background-size: cover;
     fill: white;
 }
@@ -283,6 +256,45 @@ body {
     fill: #3F5D45;
     margin: 0 auto;
 }
+#product-list{
+    margin-bottom: 30px;
+}
+#product-list .product{
+    width: 300px;
+    margin: 0 10px;
+    border: 2px solid #EAF0ED;
+}
+#product-list .product .row{
+    border-bottom: 2px solid #EAF0ED;
+    color: #3F5D45;
+}
+#product-list .product .row .choice-name{
+    float: left;
+    padding: 13px 33px;
+    border-right: 2px solid #EAF0ED;
+    font: Semibold 24px/20px PingFang TC;
+    font-size: 1.35rem;
+    font-weight: 300;
+}
+#product-list .product .row .choice-price{
+    float: right;
+    padding: 13px 0;
+    padding-right: 20px;
+    font: Semibold 24px/20px PingFang TC;
+    font-size: 1.3rem;
+    font-weight: 350;
+}
+#product-list .product a{
+    display: flex;
+    justify-content: center;
+    padding: 16px 0;
+    background-color: #EAF0ED;
+    color: #3F5D45;
+    font: Semibold 24px/20px PingFang TC;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
 #footer{
     padding: 0 30px;
     padding-top: 38px;
@@ -320,4 +332,211 @@ body {
     padding-top: 23px;
     padding-bottom: 30px;
     color: #3F5D45;
+}
+
+
+
+
+
+@media screen and (min-width: 768px){
+    #wrap{
+        display: none;
+    }
+    #wrap-lp{
+        display: block;
+        width: 940px;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    #wrap-lp .logo{
+        float: left;
+        display: flex;
+        justify-content: center;
+    }
+    #wrap-lp .logo img:nth-child(1){
+        display: block;
+        width: 40px;
+        height: 40px;
+        padding-right: 10px;
+    }
+    #wrap-lp .logo img:nth-child(2){
+        display: block;
+        width: 171px;
+        height: 27px;
+        margin-top: 10px;
+    }
+    #wrap-lp .nav{
+        float: right;
+        margin-top: 10px;
+    }
+    #wrap-lp .nav a{
+        padding-left: 60px;
+        color: #3F5D45;
+        font-size: 1.3rem;
+        text-decoration: none;
+    }
+    #wrap-lp .nav a .car{
+        width: 24px;
+        height: 24px;
+    }
+    #banner{
+        width: 940px;
+        height: 496px;
+        margin: 0 auto;
+    }
+    #center-main .btn-main{
+        width: 260px;
+        height: 256px;
+        font-size: 1.4rem;
+    }
+    #show-svg .row{
+        display: flex;
+        justify-content: center;
+        height: 420px;
+        background: #EAF0ED;
+        margin-top: 80px;
+        margin-bottom: 105px;
+    }
+    #show-svg .row:nth-child(1) .title-svg{
+        display: block;
+        width: 89px;
+        height: 307px;
+        background: url('../img/lg-為什麼選擇了做甜點.svg')no-repeat;
+        order: 3;
+        margin: 0;
+        margin-top: -20px;
+    }
+    #show-svg .row:nth-child(2){
+        display: flex;
+        justify-content: center;
+    }
+    #show-svg .row:nth-child(2) .title-svg{
+        display: block;
+        width: 89px;
+        height: 307px;
+        background: url('../img/lg-為什麼一定要吃甜點.svg')no-repeat;
+        order: 2;
+        margin: 0;
+        margin-top: -20px;
+        margin-right: 42px;
+    }
+    #show-svg .row:nth-child(3){
+        display: block;
+        background-color: #FFFFFF;
+        margin: 0;
+    }
+    #show-svg .row:nth-child(3) .title-svg{
+        display: block;
+        width: 89px;
+        height: 328px;
+        margin: 0 auto;
+        background: url('../img/sm-想吃甜點是不需要理由的.svg')no-repeat;
+        order: 3;
+    }
+    #show-svg .img-svg1,
+    #show-svg .img-svg2,
+    #show-svg .img-svg3{
+        display: block;
+        width: 460px;
+        height: 460px;
+        margin-top: -20px;
+        order: 1;
+        z-index: 1;
+    }
+    #show-svg .img-svg2{
+        order: 3;
+    }
+    #show-svg .content{
+        width: 371px;
+        height: 420px;
+        padding: 0;
+        padding-left: 55px;
+        padding-right: 60px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        writing-mode: vertical-lr;
+        order: 2;
+    }
+    #show-svg .row:nth-child(2) .content{
+        order: 1;
+    }
+    #product-list{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+    #subscribe-email{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        padding: 38px 122px;
+    }
+    #subscribe-email .row{
+        padding: 0;
+    }
+    #subscribe-email .subscribe-email-form{
+        margin: 0;
+        margin-left: 124px;
+    }
+    #footer{
+        padding-bottom: 30px;
+    }
+    #footer .container{
+        width: 940px;
+        margin: 0 auto;
+        padding-left: 122px;
+        position: relative;
+    }
+    #footer .footer-logo{
+        display: block;
+        width: 171px;
+        height: 27px;
+    }
+    #footer .footer-content{
+        margin: 0;
+        margin-top: 100px;
+    }
+    #footer img{
+        display: block;
+        width: 59px;
+        height: 219px;
+        position: absolute;
+        top: 0;
+        right: 122px;
+    }
+    #footer p{
+        position: absolute;
+        bottom: -35px;
+        right: 122px;
+    }
+}
+@media screen and (max-width: 768px){
+    #wrap-lp{
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    #banner{
+        width: 100%;
+    }
+    #footer .container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    #wrap-lp{
+        display: none;
+    }
+    #footer img{
+        display: none;
+    }
+    #product-list .product{
+        display: none;
+        width: 315px;
+        margin: 0 auto;
+    }
+    #product-list .product.open{
+        display: block;
+    }  
 }
